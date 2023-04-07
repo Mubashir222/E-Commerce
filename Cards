@@ -1,0 +1,28 @@
+import React from 'react'
+import {Cards} from '../api/CardAPI'
+
+export default function Card() {
+  return (
+    <>
+        <section className="text-gray-600 body-font">
+            <div className="container px-5 py-24 mx-auto">
+                <div className="flex flex-wrap -mx-4 -mb-10 text-center">
+                        {Cards.map(item => (
+                            <div key={item.id} className="lg:w-1/4 md:w-1/2 sm:w-1/2 mb-10 px-4">
+                                <div className="rounded-lg h-64 overflow-hidden">
+                                    <img alt="content" className="object-cover object-center h-full w-full" src={item.image} />
+                                </div>
+                                <div className='my-2'>
+                                    <h1 className="text-lg font-medium text-gray-900 my-2 float-left">{item.heading}</h1>
+                                    <h1 className='text-lg font-medium text-gray-900 my-2 float-right'>{item.price}</h1>
+                                </div>
+                                <p className='float-left text-sm'>{item.description}</p>
+                                <button className="block float-left mx-auto mt-6 text-gray-800 font-bold border-2 border-gray-500 py-1 px-4 rounded-full">{item.button}</button>
+                            </div>
+                        ))}
+                </div>
+            </div>
+        </section>
+    </>
+  )
+}
