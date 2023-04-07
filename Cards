@@ -1,6 +1,43 @@
 import React from 'react'
 import {Cards} from '../api/CardAPI'
 
+const Cards = [
+    {
+        id: '1',
+        image: 'https://dummyimage.com/1201x501',
+        heading: 'Gaming Headphone',
+        price: '299$',
+        description: 'Table with air puffer, stained venner/black',
+        button: 'Add to Card'
+    },
+    {
+        id: '2',
+        image: 'https://dummyimage.com/1201x501',
+        heading: 'Macbook pro 13"',
+        price: '1099$',
+        description: '256 Hard, 8 core GPU, 8 GB Ram',
+        button: 'Add to Card'
+    },
+    {
+        id: '3',
+        image: 'https://dummyimage.com/1201x501',
+        heading: 'HomePod mini',
+        price: '59$',
+        description: '5 Color Available for HomePod',
+        button: 'Add to Card'
+    },
+    {
+        id: '4',
+        image: 'https://dummyimage.com/1201x501',
+        heading: 'Laptop Sleeve Macbook',
+        price: '59$',
+        description: 'Organic cotton, fertraid certified',
+        button: 'Add to Card'
+    }
+]
+
+// https://cdn.discordapp.com/attachments/1086574178276233240/1087922213048557568/DriibleWebDesignSingleProduct.webp
+
 export default function Card() {
   return (
     <>
