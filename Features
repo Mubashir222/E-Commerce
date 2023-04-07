@@ -1,0 +1,67 @@
+import {people} from '../api/FeaturesApi'
+
+const people = [
+    {
+        id: '1',
+        imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        name: 'Furniture',
+        role: '240 item Available'
+    },
+    {
+        id: '2',
+        imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        name: 'Headphone',
+        role: '240 item Available'
+    },
+    {
+        id: '3',
+        imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        name: 'Shoe',
+        role: '240 item Available'
+    },
+    {
+        id: '4',
+        imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        name: 'Bag',
+        role: '240 item Available'
+    },
+    {
+        id: '5',
+        imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        name: 'Laptop',
+        role: '240 item Available'
+    },
+    {
+        id: '6',
+        imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        name: 'Book',
+        role: '240 item Available'
+    },
+]
+
+export default function Test() {
+  return (
+    <>
+        <div className='py-24' style={{backgroundColor: '#DFC0AB', height: '100vh'}}>
+            <div className='mx-48 px-10 pt-5 bg-white border h-fit border-1'>
+                <div className='pb-6 pt-4 border-b-2'>
+                    <span className='text-3xl font-semibold'>Popular Categories</span>
+                </div>
+                <ul role="list" className="my-8 grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-6 xl:col-span-2">
+                    {people.map((item) => (
+                        <li key={item.id} className='bg-gray-100 px-3 py-3 rounded-lg'>
+                            <div className="flex items-center gap-x-6">
+                                <img className="h-16 w-16" src={item.imageUrl} alt="" />
+                                <div>
+                                    <h3 className="pb-2 text-2xl font-semibold leading-7 tracking-tight text-gray-900">{item.name}</h3>
+                                    <p className="text-sm font-semibold leading-6 text-gray-500">{item.role}</p>
+                                </div>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    </>
+  )
+}
